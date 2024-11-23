@@ -46,7 +46,7 @@ NAT port mappings by simply changing calls to @racket[udp-bind!] and
 Each socket managed by the library is associated with a
 @racket[mapping-change-listener], a background thread that tracks
 changes to the NAT configuration, keeping a set of "port assignments"
-up-to-date. A user-supplied callback (@tt{on-mapping-change}) is
+up-to-date. A user-supplied callback (@racket[_on-mapping-change]) is
 called every time the port assignment set changes.
 
 Each port assignment in a set is an address at which the corresponding
