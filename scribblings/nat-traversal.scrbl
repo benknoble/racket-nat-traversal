@@ -90,7 +90,8 @@ Opens and starts managing a TCP or UDP port mapping at the local NAT
 for the given port. This routine is the workhorse that both
 @racket[udp-bind!/public] and @racket[tcp-listen/public] delegate to.}
 
-@defstruct*[mapping-change-listener ([thread thread?]) #:prefab]{
+@deftogether[(@defproc[(mapping-change-listener? [v any/c]) boolean?]
+              @defproc[(mapping-change-listener-thread [m mapping-change-listener?]) thread?])]{
 Handle for a mapping change listener. Useful with
 @racket[mapping-change-listener-stop!] and so forth.}
 
